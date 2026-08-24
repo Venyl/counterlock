@@ -1,0 +1,69 @@
+@font-face {
+	font-family: "Retail Demo";
+	src: url(../assets/fonts/retaildemo-bold.otf) format("opentype");
+	font-weight: 700;
+}
+
+html {
+	/* Get these neutral color values from https://venyl.github.io/dynamic-palette-generator */
+	--clr-neutral-1: oklch(0.98 0.004 80);
+	--clr-neutral-2: oklch(0.96 0.008 80);
+	--clr-neutral-3: oklch(0.93 0.012 80);
+	--clr-neutral-4: oklch(0.88 0.014 80);
+	--clr-neutral-5: oklch(0.82 0.016 80);
+	--clr-neutral-6: oklch(0.74 0.018 80);
+	--clr-neutral-7: oklch(0.67 0.02 80);
+	--clr-neutral-8: oklch(0.6 0.022 80);
+	--clr-neutral-9: oklch(0.53 0.02 80);
+	--clr-neutral-10: oklch(0.45 0.018 80);
+	--clr-neutral-11: oklch(0.38 0.016 80);
+	--clr-neutral-12: oklch(0.33 0.014 80);
+	--clr-neutral-13: oklch(0.26 0.012 80);
+	--clr-neutral-14: oklch(0.21 0.009 80);
+	--clr-neutral-15: oklch(0.17 0.007 80);
+	--clr-neutral-16: oklch(0.1 0.005 80);
+
+	/* Main variables */
+	--clr-surface-0: var(--clr-neutral-16);
+	--clr-surface-1: var(--clr-neutral-15);
+	--clr-surface-2: var(--clr-neutral-14);
+	--clr-surface-3: var(--clr-neutral-13);
+	--clr-surface-4: var(--clr-neutral-12);
+
+	--clr-text-1: var(--clr-neutral-1);
+	--clr-text-2: var(--clr-neutral-5);
+	--clr-text-3: var(--clr-neutral-8);
+
+	--clr-link: oklch(0.69 0.16 260);
+
+	--clr-brand: oklch(0.9 0.05 81);
+
+	/* Styles */
+	color-scheme: dark light;
+	scrollbar-color: var(--clr-neutral-8) var(--clr-neutral-12);
+}
+
+.link {
+	color: var(--clr-link);
+	text-decoration: underline;
+}
+
+body {
+	color: var(--clr-text-1);
+	background-color: var(--clr-surface-1);
+	background-image:
+		linear-gradient(color-mix(var(--clr-surface-1), transparent 15%)), url(../assets/images/bg.jpg);
+	background-attachment: fixed;
+	background-size: 100%, cover;
+
+	accent-color: initial;
+	caret-color: initial;
+	font-family: "Google Sans Flex", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-variation-settings:
+		"slnt" 0,
+		"wdth" 100,
+		"GRAD" 0,
+		"ROND" 0;
+}

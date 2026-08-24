@@ -1,0 +1,149 @@
+@layer reset {
+	*,
+	*::before,
+	*::after,
+	::file-selector-button {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+		border: 0 solid;
+		line-height: calc(1em + 0.5rem);
+	}
+
+	html {
+		/* Disable text inflation on mobile browsers */
+		-moz-text-size-adjust: none;
+		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
+
+		-webkit-tap-highlight-color: transparent;
+		tab-size: 4;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		html {
+			interpolate-size: allow-keywords;
+			scroll-behavior: smooth;
+		}
+	}
+
+	html,
+	body {
+		min-height: 100%;
+	}
+
+	dialog {
+		margin: auto;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: inherit;
+		font-weight: inherit;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
+	a[href] {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	ol[role='list'],
+	ul[role='list'] {
+		list-style: none;
+	}
+
+	address {
+		font-style: normal;
+	}
+
+	sub,
+	sup {
+		/* Prevent `sub` and `sup` elements from affecting the line height */
+		font-size: 75%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+
+	sub {
+		bottom: -0.25em;
+	}
+
+	sup {
+		top: -0.5em;
+	}
+
+	table {
+		border-collapse: collapse;
+	}
+
+	hr {
+		border-top-width: 1px;
+	}
+
+	button,
+	input,
+	optgroup,
+	select,
+	textarea,
+	::file-selector-button {
+		/* Ensure fonts match the rest of the website */
+		font: inherit;
+		color: inherit;
+		letter-spacing: inherit;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	::placeholder {
+		/* Normalize placeholder color across browsers */
+		color: color-mix(in oklch, currentColor, transparent);
+	}
+
+	img,
+	svg,
+	video,
+	canvas,
+	audio,
+	iframe,
+	embed,
+	object {
+		display: block;
+	}
+
+	img,
+	svg,
+	video {
+		max-width: 100%;
+		height: auto;
+	}
+
+	a[href],
+	area,
+	button,
+	label[for],
+	select,
+	summary,
+	[tabindex]:not([tabindex*='-'], pre),
+	input:not(
+		[type='text'],
+		[type='email'],
+		[type='number'],
+		[type='password'],
+		[type=''],
+		[type='tel'],
+		[type='url']
+	) {
+		cursor: pointer;
+	}
+}
