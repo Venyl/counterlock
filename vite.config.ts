@@ -17,7 +17,7 @@ export default defineConfig({
 
 			adapter: adapter({}),
 			output: {
-				bundleStrategy: "inline"
+				bundleStrategy: "single"
 			},
 			paths: {
 				base: process.argv.includes("dev") ? "" : "/counterlock"
